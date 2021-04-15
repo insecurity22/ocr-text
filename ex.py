@@ -175,3 +175,5 @@ if __name__ == '__main__':
 # 기능 추가
 # 1. 단축키
 # 2. font
+# 3. Machine learning
+# https://niceman.tistory.com/157?category=1009824
