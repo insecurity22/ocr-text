@@ -105,8 +105,7 @@ def startbtn(): # 시작 버튼 눌렀을 때, "캡쳐 이미지 -> OCR Text로 
             cv2.imwrite(filepath, grayImg)
 
             # OCR, Image -> Text 변경
-            pytesseract.pytesseract.tesseract_cmd = r'.\tresseract\tesseract.exe'
-            text = pytesseract.image_to_string(Image.open(filepath), lang='eng+kor')
+            text = image_to_string(filepath, lang='kor+eng', config='--psm 1 -c preserve_interword_spaces=1')
 
             # 프로그램 왼쪽에 이미지 띄워주기
             img = tk.PhotoImage(file=filepath)
